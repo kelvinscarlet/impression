@@ -46,41 +46,24 @@ ImpressionistDoc::ImpressionistDoc()
 		= new PointBrush(this, "Scattered Lines");
 	ImpBrush::c_pBrushes[BRUSH_SCATTERED_CIRCLES]
 		= new PointBrush(this, "Scattered Circles");
-	// create one instance of each brush
-	ImpBrush::c_nBrushCount	= NUM_BRUSH_TYPE;
-	ImpBrush::c_pBrushes	= new ImpBrush* [ImpBrush::c_nBrushCount];
-
-	ImpBrush::c_pBrushes[BRUSH_POINTS]	= new PointBrush( this, "Points" );
-
-	// Note: You should implement these 5 brushes.  They are set the same (PointBrush) for now
-	ImpBrush::c_pBrushes[BRUSH_LINES]				
-		= new LineBrush( this, "Lines" );
-	ImpBrush::c_pBrushes[BRUSH_CIRCLES]				
-		= new PointBrush( this, "Circles" );
-	ImpBrush::c_pBrushes[BRUSH_SCATTERED_POINTS]	
-		= new PointBrush( this, "Scattered Points" );
-	ImpBrush::c_pBrushes[BRUSH_SCATTERED_LINES]		
-		= new PointBrush( this, "Scattered Lines" );
-	ImpBrush::c_pBrushes[BRUSH_SCATTERED_CIRCLES]	
-		= new PointBrush( this, "Scattered Circles" );
 
 	// make one of the brushes current
 	m_pCurrentBrush = ImpBrush::c_pBrushes[0];
 	
-	/*// create one instance of each stroke direction
-	ImpBrush::c_nStrokeDirectionCount = NUM_STROKE_DIRECTION;
-	ImpBrush::c_pStrokeDirections = new ImpBrush*[ImpBrush::c_nStrokeDirectionCount];
+	//// create one instance of each stroke direction
+	//ImpBrush::c_nStrokeDirectionCount = NUM_STROKE_DIRECTION;
+	//ImpBrush::c_pStrokeDirections = new ImpBrush*[ImpBrush::c_nStrokeDirectionCount];
 
-	// Note: You should implement these 3 stroke directions.
-	ImpBrush::c_pStrokeDirections[STROKE_SLIDER_RIGHT_MOUSE]
-		= new LineBrush(this, "Slider/Right Mouse");
-	ImpBrush::c_pStrokeDirections[STROKE_GRADIENT]
-		= new PointBrush(this, "Gradient");
-	ImpBrush::c_pStrokeDirections[STROKE_BRUSH_DIRECTION]
-		= new PointBrush(this, "Brush Direction");
+	//// Note: You should implement these 3 stroke directions.
+	//ImpBrush::c_pStrokeDirections[STROKE_SLIDER_RIGHT_MOUSE]
+	//	= new PointBrush(this, "Slider/Right Mouse");
+	//ImpBrush::c_pStrokeDirections[STROKE_GRADIENT]
+	//	= new PointBrush(this, "Gradient");
+	//ImpBrush::c_pStrokeDirections[STROKE_BRUSH_DIRECTION]
+	//	= new PointBrush(this, "Brush Direction");
 
-	// make one of the stroke directions current
-	m_pCurrentStrokeDirection = ImpBrush::c_pStrokeDirections[0];*/
+	//// make one of the stroke directions current
+	//m_pCurrentStrokeDirection = ImpBrush::c_pStrokeDirections[0];
 
 }
 
@@ -110,22 +93,22 @@ void ImpressionistDoc::setBrushType(int type)
 	m_pCurrentBrush = ImpBrush::c_pBrushes[type];
 }
 
-/*//---------------------------------------------------------
-// Called by the UI when the user changes the stroke
-// direction.
-// type: one of the defined stroke directions.
-//---------------------------------------------------------
-void ImpressionistDoc::setStrokeDirection(int type)
-{
-	m_pCurrentBrush = ImpBrush::c_pBrushes[type];
-}*/
+////---------------------------------------------------------
+//// Called by the UI when the user changes the stroke
+//// direction.
+//// type: one of the defined stroke directions.
+////---------------------------------------------------------
+//void ImpressionistDoc::setStrokeDirection(int type)
+//{
+//	m_pCurrentStrokeDirection = ImpBrush::c_pStrokeDirections[type];
+//}
 
 //---------------------------------------------------------
 // Returns the size of the brush.
 //---------------------------------------------------------
-int ImpressionistDoc::getSize()
+int ImpressionistDoc::getBrushSize()
 {
-	return m_pUI->getSize();
+	return m_pUI->getBrushSize();
 }
 
 //---------------------------------------------------------

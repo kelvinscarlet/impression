@@ -21,14 +21,14 @@ enum
 	NUM_BRUSH_TYPE // Make sure this stays at the end!
 };
 
-/*// Each stroke direction has an associated constant.
+// Each stroke direction has an associated constant.
 enum
 {
 	STROKE_SLIDER_RIGHT_MOUSE = 0,
 	STROKE_GRADIENT,
 	STROKE_BRUSH_DIRECTION,
 	NUM_STROKE_DIRECTION // Make sure this stays at the end!
-};*/
+};
 
 
 class ImpressionistDoc; // Pre-declaring class
@@ -60,10 +60,13 @@ public:
 	ImpressionistDoc* GetDocument( void );
 
 	// Return the name of the brush (not used in this version).
-	char* BrushName( void );
-	
+	char* BrushName(void);
+
 	static int			c_nBrushCount;	// How many brushes we have,
 	static ImpBrush**	c_pBrushes;		// and what they are.
+
+	//static int			c_nStrokeDirectionCount;	// How many stroke directions we have,
+	//static ImpBrush**	c_pStrokeDirections;		// and what they are.
 
 private:
 	ImpressionistDoc*	m_pDoc;
