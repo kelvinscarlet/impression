@@ -1017,8 +1017,8 @@ ImpressionistUI::ImpressionistUI() {
 		m_PaintlyLayerSlider->type(FL_HOR_NICE_SLIDER);
 		m_PaintlyLayerSlider->labelfont(FL_COURIER);
 		m_PaintlyLayerSlider->labelsize(12);
-		m_PaintlyLayerSlider->minimum(0);
-		m_PaintlyLayerSlider->maximum(30);
+		m_PaintlyLayerSlider->minimum(1);
+		m_PaintlyLayerSlider->maximum(5);
 		m_PaintlyLayerSlider->step(1);
 		m_PaintlyLayerSlider->value(m_nPaintlyLayer);
 		m_PaintlyLayerSlider->align(FL_ALIGN_RIGHT);
@@ -1030,7 +1030,7 @@ ImpressionistUI::ImpressionistUI() {
 		m_PaintlyR0LevelSlider->labelfont(FL_COURIER);
 		m_PaintlyR0LevelSlider->labelsize(12);
 		m_PaintlyR0LevelSlider->minimum(0);
-		m_PaintlyR0LevelSlider->maximum(30);
+		m_PaintlyR0LevelSlider->maximum(5);
 		m_PaintlyR0LevelSlider->step(1);
 		m_PaintlyR0LevelSlider->value(m_nPaintlyR0Level);
 		m_PaintlyR0LevelSlider->align(FL_ALIGN_RIGHT);
